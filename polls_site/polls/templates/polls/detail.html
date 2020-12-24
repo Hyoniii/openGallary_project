@@ -1,0 +1,10 @@
+<h1>{{ question.question_text }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action='http://127.0.0.1:8000/admin/'  method="post">
+{% csrf_token %}
+    
+    <input type="text" name="answer_num" value="phone_num"> 
+<input type="submit" value="Vote">
+</form>
